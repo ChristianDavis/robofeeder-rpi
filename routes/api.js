@@ -14,11 +14,15 @@ exports.name = function (req, res) {
 exports.gpio = function (req, res) {
   var command = req.params.command;
   var response = 'none';
+  var pin = 4;
+  var pin = 18;
 
   if (command === "start"){
     // start modulated signal
     response = "started";
-    piblaster.setPwm(17, 0.06);  
+    piblaster.setPwm(pin, 0.06);
+    piblaster.setPwm(pin2, 0.06);  
+
 
     
 /*
@@ -30,7 +34,9 @@ exports.gpio = function (req, res) {
   */
   }else if (command === "stop"){
       response = "stopped";
-      piblaster.setPwm(17, 0);  
+      piblaster.setPwm(pin, 0);  
+      piblaster.setPwm(pin2, 0);  
+
 
   }else if(command === "signal"){
       response = "sigged";

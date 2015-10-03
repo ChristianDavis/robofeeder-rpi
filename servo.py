@@ -2,8 +2,8 @@
 import RPi.GPIO as GPIO
 import time
 
-Servo1Pin=18
-Servo2Pin=23
+Servo1Pin=4
+Servo2Pin=18
 
 # Tell python what pin mode to use
 GPIO.setmode(GPIO.BCM)
@@ -17,7 +17,7 @@ def servo_CW(ServoPIN):
   servo = GPIO.PWM(ServoPIN, 100)
   # Then setup the duty cycle, 2.5pulses/100cycles
   servo.start(2.5)
-  time.sleep(.7)
+  time.sleep(1.8)
   servo.stop()
 
 # This function turns the servo counter clock wise
@@ -31,9 +31,9 @@ while True:
   print "Sending CW signal to PIN:", Servo1Pin
   servo_CW(Servo1Pin)
 
-  time.sleep(.8)
-
+  time.sleep(2)
+  
   print "Sending CCW signal to PIN:", Servo1Pin
-  servo_CCW(Servo1Pin)
+  servo_CCW(Servo2Pin)
 
   time.sleep(.8)
