@@ -15,7 +15,7 @@ exports.gpio = function (req, res) {
   var command = req.params.command;
   var response = 'none';
   var pin = 4;
-  var pin = 18;
+  var pin2 = 18;
 
   if (command === "start"){
     // start modulated signal
