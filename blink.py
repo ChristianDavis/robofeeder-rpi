@@ -2,12 +2,12 @@
 import RPi.GPIO as GPIO             ## Import GPIO Library
 import time                         ## Import 'time' library (for 'sleep')
 
-blue = 18                            ## These are our LEDs
+LEDpin = 18                            ## These are our LEDs
 ourdelay = 1                        ## Delay
 # pins 4,17,18,21,22,23,24,25
 
 GPIO.setmode(GPIO.BOARD)            ## Use BOARD pin numbering
-GPIO.setup(pin, GPIO.OUT)        ## set output
+GPIO.setup(LEDpin, GPIO.OUT)        ## set output
 
 ## function to save code
 
@@ -17,6 +17,6 @@ def activateLED( pin, delay ):
   GPIO.output(pin, GPIO.LOW)       ## set LOW (LED OFF)
   return;
 
-activateLED(blue,ourdelay)
+activateLED(LEDpin,ourdelay)
 
 GPIO.cleanup()                      ## close down library
