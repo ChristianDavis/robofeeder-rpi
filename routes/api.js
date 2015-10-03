@@ -3,6 +3,7 @@
  */
 
 //var gpio = require("pi-gpio");
+var piblaster = require("pi-blaster.js");  
 
 exports.name = function (req, res) {
   res.json({
@@ -17,7 +18,8 @@ exports.gpio = function (req, res) {
   if (command === "start"){
     // start modulated signal
     response = "started";
-    
+    piblaster.setPwm(17, 0.06);  
+
     
 /*
     gpio.open(16, "output", function(err) {     // Open pin 16 for output 
@@ -28,6 +30,8 @@ exports.gpio = function (req, res) {
   */
   }else if (command === "stop"){
       response = "stopped";
+      piblaster.setPwm(17, 0);  
+
   }else if(command === "signal"){
       response = "sigged";
     var python = require('child_process').spawn(
