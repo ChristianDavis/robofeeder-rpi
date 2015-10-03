@@ -30,12 +30,14 @@ app.use(app.router);
 // development only
 if (app.get('env') === 'development') {
   app.use(express.errorHandler());
+  console.log("Development code");
 }
 
 // production only
 if (app.get('env') === 'production') {
-  // TODO
+  console.log("Production code");
 };
+  app.get('/api/gpio/:command', api.gpio);
 
 
 /**
@@ -48,6 +50,8 @@ app.get('/:name', routes.views);
 app.get('/partials/:name', routes.partials);
 
 // JSON API
+
+// API
 app.get('/api/name', api.name);
 
 // redirect all others to the index (HTML5 history)

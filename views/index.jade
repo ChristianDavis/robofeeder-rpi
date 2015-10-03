@@ -12,11 +12,11 @@ block body
 		.jumbotron
 			h1 Remote Control
 			p These are simple buttons to send commands to the Raspberry Pi.
-			+button("primary", "more.htm", "large") Signal
+			+button("primary", "api/gpio/signal", "large") Signal
 			| &nbsp;
-			+button("success", "more.htm", "large") Start
+			+button("success", "api/gpio/start", "large") Start
 			| &nbsp;
-			+button("danger", "more.htm", "large") Stop
+			+button("danger", "api/gpio/stop", "large") Stop
 
 			div(ng-controller='AppCtrl')
 				h2 Hello {{name}}
