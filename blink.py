@@ -2,7 +2,7 @@
 import RPi.GPIO as GPIO             ## Import GPIO Library
 import time                         ## Import 'time' library (for 'sleep')
 
-LEDpin = 18                            ## These are our LEDs
+LEDpin = 12                            ## These are our LEDs
 ourdelay = 1                        ## Delay
 # pins 4,17,18,21,22,23,24,25
 
