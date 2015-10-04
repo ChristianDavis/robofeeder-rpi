@@ -9,9 +9,21 @@ angular.module('myApp.controllers', []).
     });
   }).
   controller('MyCtrl1', function ($scope, socket) {
-    socket.on('send:time', function (data) {
-      $scope.time = data.time;
-    });
+    var vm = this;
+    vm.status = '';
+    
+    vm.startServo = function(){
+      socket.on('send:start', function (data) {
+        vm.status = data.status;
+      });
+    }
+ 
+    vm.Stop = function(){
+      socket.on('send:stop', function (data) {
+        vm.status = data.status;
+      });
+    }
+    
   }).
   controller('MyCtrl2', function ($scope) {
     // write Ctrl here

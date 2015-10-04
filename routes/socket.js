@@ -3,13 +3,13 @@
  */
 
 module.exports = function (socket) {
-  socket.emit('send:name', {
-    name: 'Bob'
+  
+  socket.emit('send:start', {
+    status: 'Running'
+  });
+  
+  socket.emit('send:stop', {
+    status: 'Stopped'
   });
 
-  setInterval(function () {
-    socket.emit('send:time', {
-      time: (new Date()).toString()
-    });
-  }, 1000);
 };

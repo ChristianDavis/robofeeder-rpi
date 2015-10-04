@@ -3,7 +3,7 @@ include mixins
 
 block body
 
-	.container
+	.container(ng-controller='MyCtrl1 as servo')
 
 		//- Navbar with dropdowns, default color
 		+nav("The Robo Feeder", "dropdown_menu", "inverse")
@@ -18,15 +18,10 @@ block body
 			| &nbsp;
 			+button("danger", "api/gpio/stop", "large") Stop
 
-			div(ng-controller='AppCtrl')
-				h2 Hello {{name}}
-				ul.menu
-					li
-					a(href='view1') view1
-					li
-					a(href='view2') view2
+			button.btn(ng-click="servo.startServo()" title="click to search") Fire
 
-			div(ng-view)
+			div(ng-controller='AppCtrl')
+				h2  {{servo.status}}
 
 	script( src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' )
 	script( src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js' )
