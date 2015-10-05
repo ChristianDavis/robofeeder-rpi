@@ -18,9 +18,8 @@ var io = require('socket.io').listen(server);
  */
 
 // all environments
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3001);
 app.set('views', __dirname + '/views');
-app.set('view engine', 'jade');
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
@@ -37,7 +36,6 @@ if (app.get('env') === 'development') {
 if (app.get('env') === 'production') {
   console.log("Production code");
 };
-  app.get('/api/gpio/:command', api.gpio);
 
 
 /**
@@ -45,11 +43,18 @@ if (app.get('env') === 'production') {
  */
 
 // serve index and view partials
-app.get('/', routes.index);
-app.get('/:name', routes.views);
-app.get('/partials/:name', routes.partials);
-
-// JSON API
+//app.get('/', routes.index);
+app.get('/', function(req, res) {
+        var options = {
+            root: './public/',
+            dotfiles: 'deny',
+            headers: {
+                'x-timestamp': Date.now(),
+                'x-sent': true
+            }
+        };
+      res.sendFile('index.html', options);
+});
 
 // API
 app.get('/api/name', api.name);

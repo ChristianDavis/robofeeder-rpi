@@ -3,27 +3,43 @@
 /* Controllers */
 
 angular.module('myApp.controllers', []).
-  controller('AppCtrl', function ($scope, socket) {
-    socket.on('send:name', function (data) {
-      $scope.name = data.name;
-    });
-  }).
-  controller('MyCtrl1', function ($scope, socket) {
+  controller('AppCtrl', function (socket) {
     var vm = this;
     vm.status = '';
-    
+	vm.toggle = false;
+	
+	socket.on('connect', function (data) {
+	    console.log("Connected to server.");
+	});
+	
+	socket.on('disconnect', function (data) {
+	    console.log("Lose connection to server.");
+	});
+	
+	socket.on('server_status', function (data) {
+		console.log("Received status: " + data.status);
+		vm.status = data.status;
+		vm.toggle = data.isRunning;
+	});
+
     vm.startServo = function(){
-      socket.on('send:start', function (data) {
-        vm.status = data.status;
-      });
+      console.log("Start clicked");
+      socket.emit('client_send:start', function () {
+		  // not sending any data
+	  });
     }
  
-    vm.Stop = function(){
-      socket.on('send:stop', function (data) {
-        vm.status = data.status;
-      });
+    vm.stopServo = function(){
+	  console.log("Stop clicked");
+      socket.emit('client_send:stop', function () {
+		  // not sending any data
+	  });
     }
     
+	vm.buttonToggle = function(){
+		return vm.toggle;
+	}
+	
   }).
   controller('MyCtrl2', function ($scope) {
     // write Ctrl here

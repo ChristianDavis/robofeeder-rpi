@@ -4,13 +4,14 @@
     <meta charset="utf8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <base href="/">
     <title>Robo Feeder App</title>
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/css/app.css">
     <link href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.0/flatly/bootstrap.min.css" rel="stylesheet"/>
   </head>
   <body>
-    <div ng-controller="MyCtrl1 as servo" class="container">
+    <div ng-controller="AppCtrl as app" class="container" ng-init="isDisabled = false">
       <nav role="navigation" class="navbar navbar-inverse">
         <div class="navbar-header">
           <button type="button" data-toggle="collapse" data-target="#dropdown_menu" aria-expanded="false" aria-controls="navbar" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="navbar-brand">The Robo Feeder</a>
@@ -22,11 +23,12 @@
       </nav>
       <div class="jumbotron">
         <h1>Remote Control</h1>
-        <p>These are simple buttons to send commands to the Raspberry Pi.</p><a href="api/gpio/signal" class="btn btn-primary btn-lg">Signal</a>&nbsp;<a href="api/gpio/start" class="btn btn-success btn-lg">Start</a>&nbsp;<a href="api/gpio/stop" class="btn btn-danger btn-lg">Stop</a>
-        <button ng-click="servo.startServo()" title="click to search" class="btn">Fire</button>
-        <div ng-controller="AppCtrl">
-          <h2> {{servo.status}}</h2>
-        </div>
+        <p>These are simple buttons to send commands to the Raspberry Pi.</p>
+		  
+        <button ng-click="app.startServo()" ng-disabled="app.toggle" class="btn btn-success btn-lg">Start</button>
+		<button ng-click="app.stopServo()" ng-disabled="!app.toggle" class="btn btn-danger btn-lg">Stop</button>
+
+          <h2> {{ app.status}} </h2>
       </div>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
