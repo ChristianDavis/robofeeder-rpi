@@ -10,7 +10,7 @@ var express = require('express'),
   path = require('path');
 
 var rpi433    = require('rpi-433'),
-    rf = require("../api/rf");  
+    rf = require("./api/rf");  
 
 
 var app = module.exports = express();
