@@ -10,12 +10,12 @@ var _runningInterval = 3000; // 1000 ms = 1 second
 
 var stopServo = function(socket){
     api.stopServo();
-	sendStatus(socket, {'status': 'Stopped','isRunning': false});
+	//sendStatus(socket, {'status': 'Stopped','isRunning': false});
 };
 
 var startServo = function(socket){
     api.startServo();
-	sendStatus(socket, {'status': 'Running','isRunning': true});
+	//sendStatus(socket, {'status': 'Running','isRunning': true});
 };
 
 var sendStatus = function(socket, status){
