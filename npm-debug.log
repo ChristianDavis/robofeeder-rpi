@@ -1,0 +1,394 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'rpi-433',
+1 verbose cli   '--save' ]
+2 info using npm@2.14.2
+3 info using node@v4.0.0
+4 verbose install initial load of /Users/Christian/github/robofeeder-rpi/package.json
+5 verbose installManyTop reading scoped package data from /Users/Christian/github/robofeeder-rpi/node_modules/express/package.json
+6 verbose installManyTop reading scoped package data from /Users/Christian/github/robofeeder-rpi/node_modules/jade/package.json
+7 verbose installManyTop reading scoped package data from /Users/Christian/github/robofeeder-rpi/node_modules/pi-blaster.js/package.json
+8 verbose installManyTop reading scoped package data from /Users/Christian/github/robofeeder-rpi/node_modules/pi-gpio/package.json
+9 verbose installManyTop reading scoped package data from /Users/Christian/github/robofeeder-rpi/node_modules/socket.io/package.json
+10 info package.json express@3.2.6 No license field.
+11 info package.json pi-blaster.js@0.1.1 No license field.
+12 info package.json socket.io@0.9.17 No license field.
+13 info package.json pi-gpio@0.0.8 No license field.
+14 info package.json jade@0.31.2 No license field.
+15 verbose readDependencies loading dependencies from /Users/Christian/github/robofeeder-rpi/package.json
+16 silly cache add args [ 'rpi-433', null ]
+17 verbose cache add spec rpi-433
+18 silly cache add parsed spec Result {
+18 silly cache add   raw: 'rpi-433',
+18 silly cache add   scope: null,
+18 silly cache add   name: 'rpi-433',
+18 silly cache add   rawSpec: '',
+18 silly cache add   spec: '*',
+18 silly cache add   type: 'range' }
+19 silly addNamed rpi-433@*
+20 verbose addNamed "*" is a valid semver range for rpi-433
+21 silly addNameRange { name: 'rpi-433', range: '*', hasData: false }
+22 silly mapToRegistry name rpi-433
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry https://registry.npmjs.org/
+25 silly mapToRegistry uri https://registry.npmjs.org/rpi-433
+26 verbose addNameRange registry:https://registry.npmjs.org/rpi-433 not in flight; fetching
+27 verbose request uri https://registry.npmjs.org/rpi-433
+28 verbose request no auth needed
+29 info attempt registry request try #1 at 11:20:28 AM
+30 verbose request id 8d165ccd95d988e1
+31 http request GET https://registry.npmjs.org/rpi-433
+32 http 200 https://registry.npmjs.org/rpi-433
+33 silly get cb [ 200,
+33 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+33 silly get     etag: '"3BW0VWA6SXV2PIP3WBPI6U3T3"',
+33 silly get     'content-type': 'application/json',
+33 silly get     'cache-control': 'max-age=60',
+33 silly get     'content-length': '28001',
+33 silly get     'accept-ranges': 'bytes',
+33 silly get     date: 'Sat, 24 Oct 2015 18:20:28 GMT',
+33 silly get     via: '1.1 varnish',
+33 silly get     age: '0',
+33 silly get     connection: 'keep-alive',
+33 silly get     'x-served-by': 'cache-lax1433-LAX',
+33 silly get     'x-cache': 'HIT',
+33 silly get     'x-cache-hits': '1',
+33 silly get     'x-timer': 'S1445710828.145669,VS0,VE82',
+33 silly get     vary: 'Accept' } ]
+34 verbose get saving rpi-433 to /Users/Christian/.npm/registry.npmjs.org/rpi-433/.cache.json
+35 silly addNameRange number 2 { name: 'rpi-433', range: '*', hasData: true }
+36 silly addNameRange versions [ 'rpi-433',
+36 silly addNameRange   [ '1.0.0',
+36 silly addNameRange     '1.0.1',
+36 silly addNameRange     '1.0.2',
+36 silly addNameRange     '1.0.3',
+36 silly addNameRange     '1.0.4',
+36 silly addNameRange     '1.0.5',
+36 silly addNameRange     '1.0.6',
+36 silly addNameRange     '1.0.7',
+36 silly addNameRange     '1.0.8',
+36 silly addNameRange     '1.0.9',
+36 silly addNameRange     '1.0.10',
+36 silly addNameRange     '1.0.11',
+36 silly addNameRange     '1.0.12',
+36 silly addNameRange     '1.0.13',
+36 silly addNameRange     '1.0.14',
+36 silly addNameRange     '1.0.15',
+36 silly addNameRange     '1.0.16',
+36 silly addNameRange     '1.0.17',
+36 silly addNameRange     '1.0.18',
+36 silly addNameRange     '1.0.19',
+36 silly addNameRange     '1.1.0',
+36 silly addNameRange     '1.1.1' ] ]
+37 silly addNamed rpi-433@1.1.1
+38 verbose addNamed "1.1.1" is a plain semver version for rpi-433
+39 silly mapToRegistry name rpi-433
+40 silly mapToRegistry using default registry
+41 silly mapToRegistry registry https://registry.npmjs.org/
+42 silly mapToRegistry uri https://registry.npmjs.org/rpi-433
+43 verbose addRemoteTarball https://registry.npmjs.org/rpi-433/-/rpi-433-1.1.1.tgz not in flight; adding
+44 verbose addRemoteTarball [ 'https://registry.npmjs.org/rpi-433/-/rpi-433-1.1.1.tgz',
+44 verbose addRemoteTarball   '8cffec2c4abe53e35ec6d32f129c8af5bc097ce8' ]
+45 info retry fetch attempt 1 at 11:20:28 AM
+46 info attempt registry request try #1 at 11:20:28 AM
+47 http fetch GET https://registry.npmjs.org/rpi-433/-/rpi-433-1.1.1.tgz
+48 http fetch 200 https://registry.npmjs.org/rpi-433/-/rpi-433-1.1.1.tgz
+49 silly fetchAndShaCheck shasum 8cffec2c4abe53e35ec6d32f129c8af5bc097ce8
+50 verbose addTmpTarball /var/folders/nd/47ftx41s41x6w1w0w9k80pwr0000gr/T/npm-28290-d6120439/registry.npmjs.org/rpi-433/-/rpi-433-1.1.1.tgz not in flight; adding
+51 verbose addTmpTarball already have metadata; skipping unpack for rpi-433@1.1.1
+52 silly cache afterAdd rpi-433@1.1.1
+53 verbose afterAdd /Users/Christian/.npm/rpi-433/1.1.1/package/package.json not in flight; writing
+54 verbose afterAdd /Users/Christian/.npm/rpi-433/1.1.1/package/package.json written
+55 silly install resolved [ { name: 'rpi-433',
+55 silly install resolved     version: '1.1.1',
+55 silly install resolved     description: 'NodeJS module to send and receive decimal codes through 433Mhz device on RaspberryPI 2',
+55 silly install resolved     main: 'index.js',
+55 silly install resolved     dependencies: { underscore: '^1.8.3' },
+55 silly install resolved     repository:
+55 silly install resolved      { type: 'git',
+55 silly install resolved        url: 'git+ssh://git@github.com/eroak/rpi-433.git' },
+55 silly install resolved     devDependencies: {},
+55 silly install resolved     scripts:
+55 silly install resolved      { test: 'echo "Error: no test specified" && exit 1',
+55 silly install resolved        install: 'mkdir ./build && cd ./src && /usr/bin/make' },
+55 silly install resolved     keywords:
+55 silly install resolved      [ 'raspberry',
+55 silly install resolved        '433mhz',
+55 silly install resolved        'sniffer',
+55 silly install resolved        'send',
+55 silly install resolved        'receive',
+55 silly install resolved        'nodejs',
+55 silly install resolved        'outlets',
+55 silly install resolved        'radio',
+55 silly install resolved        'code',
+55 silly install resolved        'wiringpi',
+55 silly install resolved        'rc',
+55 silly install resolved        'gpio' ],
+55 silly install resolved     author: { name: 'eroak', email: 'mr.eroak@gmail.com' },
+55 silly install resolved     license: 'ISC',
+55 silly install resolved     gitHead: '1815014cdc4a1db86e9935e8f65961dd720999d3',
+55 silly install resolved     bugs: { url: 'https://github.com/eroak/rpi-433/issues' },
+55 silly install resolved     homepage: 'https://github.com/eroak/rpi-433#readme',
+55 silly install resolved     _id: 'rpi-433@1.1.1',
+55 silly install resolved     _shasum: '8cffec2c4abe53e35ec6d32f129c8af5bc097ce8',
+55 silly install resolved     _from: 'rpi-433@*',
+55 silly install resolved     _npmVersion: '2.10.1',
+55 silly install resolved     _nodeVersion: '0.12.4',
+55 silly install resolved     _npmUser: { name: 'eroak', email: 'mr.eroak@gmail.com' },
+55 silly install resolved     dist:
+55 silly install resolved      { shasum: '8cffec2c4abe53e35ec6d32f129c8af5bc097ce8',
+55 silly install resolved        tarball: 'http://registry.npmjs.org/rpi-433/-/rpi-433-1.1.1.tgz' },
+55 silly install resolved     maintainers: [ [Object] ],
+55 silly install resolved     directories: {},
+55 silly install resolved     _resolved: 'https://registry.npmjs.org/rpi-433/-/rpi-433-1.1.1.tgz' } ]
+56 info install rpi-433@1.1.1 into /Users/Christian/github/robofeeder-rpi
+57 info installOne rpi-433@1.1.1
+58 verbose installOne of rpi-433 to /Users/Christian/github/robofeeder-rpi not in flight; installing
+59 verbose lock using /Users/Christian/.npm/_locks/rpi-433-05344d17d1640876.lock for /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433
+60 silly install write writing rpi-433 1.1.1 to /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433
+61 verbose unbuild node_modules/rpi-433
+62 silly gentlyRm /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433 is being purged from base /Users/Christian/github/robofeeder-rpi
+63 verbose gentlyRm don't care about contents; nuking /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433
+64 verbose tar unpack /Users/Christian/.npm/rpi-433/1.1.1/package.tgz
+65 verbose tar unpacking to /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433
+66 silly gentlyRm /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433 is being purged
+67 verbose gentlyRm don't care about contents; nuking /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433
+68 silly gunzTarPerm modes [ '755', '644' ]
+69 silly gunzTarPerm extractEntry package.json
+70 silly gunzTarPerm extractEntry .npmignore
+71 silly gunzTarPerm extractEntry README.md
+72 silly gunzTarPerm modified mode [ 'README.md', 436, 420 ]
+73 silly gunzTarPerm extractEntry index.js
+74 silly gunzTarPerm extractEntry src/Makefile
+75 silly gunzTarPerm extractEntry src/RCSwitch.cpp
+76 silly gunzTarPerm extractEntry src/RCSwitch.h
+77 silly gunzTarPerm modified mode [ 'src/RCSwitch.h', 436, 420 ]
+78 silly gunzTarPerm extractEntry src/RFSniffer.cpp
+79 silly gunzTarPerm extractEntry src/codesend.cpp
+80 verbose write writing to /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433/package.json
+81 info preinstall rpi-433@1.1.1
+82 verbose readDependencies loading dependencies from /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433/package.json
+83 silly prepareForInstallMany adding underscore@^1.8.3 from rpi-433 dependencies
+84 verbose readDependencies loading dependencies from /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433/package.json
+85 silly cache add args [ 'underscore@^1.8.3', null ]
+86 verbose cache add spec underscore@^1.8.3
+87 silly cache add parsed spec Result {
+87 silly cache add   raw: 'underscore@^1.8.3',
+87 silly cache add   scope: null,
+87 silly cache add   name: 'underscore',
+87 silly cache add   rawSpec: '^1.8.3',
+87 silly cache add   spec: '>=1.8.3 <2.0.0',
+87 silly cache add   type: 'range' }
+88 silly addNamed underscore@>=1.8.3 <2.0.0
+89 verbose addNamed ">=1.8.3 <2.0.0" is a valid semver range for underscore
+90 silly addNameRange { name: 'underscore', range: '>=1.8.3 <2.0.0', hasData: false }
+91 silly mapToRegistry name underscore
+92 silly mapToRegistry using default registry
+93 silly mapToRegistry registry https://registry.npmjs.org/
+94 silly mapToRegistry uri https://registry.npmjs.org/underscore
+95 verbose addNameRange registry:https://registry.npmjs.org/underscore not in flight; fetching
+96 verbose request uri https://registry.npmjs.org/underscore
+97 verbose request no auth needed
+98 info attempt registry request try #1 at 11:20:28 AM
+99 verbose etag "3ULZO7TZ9YMPRFK817I0BEBWA"
+100 http request GET https://registry.npmjs.org/underscore
+101 http 200 https://registry.npmjs.org/underscore
+102 silly get cb [ 200,
+102 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+102 silly get     etag: '"14P82UK1TSBWOGC33QI4M6KD1"',
+102 silly get     'content-type': 'application/json',
+102 silly get     'cache-control': 'max-age=60',
+102 silly get     'content-length': '41512',
+102 silly get     'accept-ranges': 'bytes',
+102 silly get     date: 'Sat, 24 Oct 2015 18:20:28 GMT',
+102 silly get     via: '1.1 varnish',
+102 silly get     age: '28',
+102 silly get     connection: 'keep-alive',
+102 silly get     'x-served-by': 'cache-lax1425-LAX',
+102 silly get     'x-cache': 'HIT',
+102 silly get     'x-cache-hits': '2',
+102 silly get     'x-timer': 'S1445710828.498969,VS0,VE0',
+102 silly get     vary: 'Accept' } ]
+103 verbose get saving underscore to /Users/Christian/.npm/registry.npmjs.org/underscore/.cache.json
+104 silly addNameRange number 2 { name: 'underscore', range: '>=1.8.3 <2.0.0', hasData: true }
+105 silly addNameRange versions [ 'underscore',
+105 silly addNameRange   [ '1.0.3',
+105 silly addNameRange     '1.0.4',
+105 silly addNameRange     '1.1.0',
+105 silly addNameRange     '1.1.1',
+105 silly addNameRange     '1.1.2',
+105 silly addNameRange     '1.1.3',
+105 silly addNameRange     '1.1.4',
+105 silly addNameRange     '1.1.5',
+105 silly addNameRange     '1.1.6',
+105 silly addNameRange     '1.1.7',
+105 silly addNameRange     '1.2.0',
+105 silly addNameRange     '1.2.1',
+105 silly addNameRange     '1.2.2',
+105 silly addNameRange     '1.2.3',
+105 silly addNameRange     '1.2.4',
+105 silly addNameRange     '1.3.0',
+105 silly addNameRange     '1.3.1',
+105 silly addNameRange     '1.3.2',
+105 silly addNameRange     '1.3.3',
+105 silly addNameRange     '1.4.0',
+105 silly addNameRange     '1.4.1',
+105 silly addNameRange     '1.4.2',
+105 silly addNameRange     '1.4.3',
+105 silly addNameRange     '1.4.4',
+105 silly addNameRange     '1.5.0',
+105 silly addNameRange     '1.5.1',
+105 silly addNameRange     '1.5.2',
+105 silly addNameRange     '1.6.0',
+105 silly addNameRange     '1.7.0',
+105 silly addNameRange     '1.8.0',
+105 silly addNameRange     '1.8.1',
+105 silly addNameRange     '1.8.2',
+105 silly addNameRange     '1.8.3' ] ]
+106 silly addNamed underscore@1.8.3
+107 verbose addNamed "1.8.3" is a plain semver version for underscore
+108 silly mapToRegistry name underscore
+109 silly mapToRegistry using default registry
+110 silly mapToRegistry registry https://registry.npmjs.org/
+111 silly mapToRegistry uri https://registry.npmjs.org/underscore
+112 verbose addRemoteTarball https://registry.npmjs.org/underscore/-/underscore-1.8.3.tgz not in flight; adding
+113 verbose addRemoteTarball [ 'https://registry.npmjs.org/underscore/-/underscore-1.8.3.tgz',
+113 verbose addRemoteTarball   '4f3fb53b106e6097fcf9cb4109f2a5e9bdfa5022' ]
+114 info retry fetch attempt 1 at 11:20:28 AM
+115 info attempt registry request try #1 at 11:20:28 AM
+116 http fetch GET https://registry.npmjs.org/underscore/-/underscore-1.8.3.tgz
+117 http fetch 200 https://registry.npmjs.org/underscore/-/underscore-1.8.3.tgz
+118 silly fetchAndShaCheck shasum 4f3fb53b106e6097fcf9cb4109f2a5e9bdfa5022
+119 verbose addTmpTarball /var/folders/nd/47ftx41s41x6w1w0w9k80pwr0000gr/T/npm-28290-d6120439/registry.npmjs.org/underscore/-/underscore-1.8.3.tgz not in flight; adding
+120 verbose addTmpTarball already have metadata; skipping unpack for underscore@1.8.3
+121 silly cache afterAdd underscore@1.8.3
+122 verbose afterAdd /Users/Christian/.npm/underscore/1.8.3/package/package.json not in flight; writing
+123 verbose afterAdd /Users/Christian/.npm/underscore/1.8.3/package/package.json written
+124 silly install resolved [ { name: 'underscore',
+124 silly install resolved     description: 'JavaScript\'s functional programming helper library.',
+124 silly install resolved     homepage: 'http://underscorejs.org',
+124 silly install resolved     keywords: [ 'util', 'functional', 'server', 'client', 'browser' ],
+124 silly install resolved     author: { name: 'Jeremy Ashkenas', email: 'jeremy@documentcloud.org' },
+124 silly install resolved     repository:
+124 silly install resolved      { type: 'git',
+124 silly install resolved        url: 'git://github.com/jashkenas/underscore.git' },
+124 silly install resolved     main: 'underscore.js',
+124 silly install resolved     version: '1.8.3',
+124 silly install resolved     devDependencies:
+124 silly install resolved      { docco: '*',
+124 silly install resolved        eslint: '0.6.x',
+124 silly install resolved        karma: '~0.12.31',
+124 silly install resolved        'karma-qunit': '~0.1.4',
+124 silly install resolved        'qunit-cli': '~0.2.0',
+124 silly install resolved        'uglify-js': '2.4.x' },
+124 silly install resolved     scripts:
+124 silly install resolved      { test: 'npm run test-node && npm run lint',
+124 silly install resolved        lint: 'eslint underscore.js test/*.js',
+124 silly install resolved        'test-node': 'qunit-cli test/*.js',
+124 silly install resolved        'test-browser': 'npm i karma-phantomjs-launcher && ./node_modules/karma/bin/karma start',
+124 silly install resolved        build: 'uglifyjs underscore.js -c "evaluate=false" --comments "/    .*/" -m --source-map underscore-min.map -o underscore-min.js',
+124 silly install resolved        doc: 'docco underscore.js' },
+124 silly install resolved     license: 'MIT',
+124 silly install resolved     files:
+124 silly install resolved      [ 'underscore.js',
+124 silly install resolved        'underscore-min.js',
+124 silly install resolved        'underscore-min.map',
+124 silly install resolved        'LICENSE' ],
+124 silly install resolved     gitHead: 'e4743ab712b8ab42ad4ccb48b155034d02394e4d',
+124 silly install resolved     bugs: { url: 'https://github.com/jashkenas/underscore/issues' },
+124 silly install resolved     _id: 'underscore@1.8.3',
+124 silly install resolved     _shasum: '4f3fb53b106e6097fcf9cb4109f2a5e9bdfa5022',
+124 silly install resolved     _from: 'underscore@>=1.8.3 <2.0.0',
+124 silly install resolved     _npmVersion: '1.4.28',
+124 silly install resolved     _npmUser: { name: 'jashkenas', email: 'jashkenas@gmail.com' },
+124 silly install resolved     maintainers: [ [Object] ],
+124 silly install resolved     dist:
+124 silly install resolved      { shasum: '4f3fb53b106e6097fcf9cb4109f2a5e9bdfa5022',
+124 silly install resolved        tarball: 'http://registry.npmjs.org/underscore/-/underscore-1.8.3.tgz' },
+124 silly install resolved     directories: {},
+124 silly install resolved     _resolved: 'https://registry.npmjs.org/underscore/-/underscore-1.8.3.tgz' } ]
+125 info install underscore@1.8.3 into /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433
+126 info installOne underscore@1.8.3
+127 verbose installOne of underscore to /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433 not in flight; installing
+128 verbose lock using /Users/Christian/.npm/_locks/underscore-bad97d57d17637f9.lock for /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433/node_modules/underscore
+129 silly install write writing underscore 1.8.3 to /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433/node_modules/underscore
+130 verbose unbuild node_modules/rpi-433/node_modules/underscore
+131 silly gentlyRm /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433/node_modules/underscore is being purged from base /Users/Christian/github/robofeeder-rpi
+132 verbose gentlyRm don't care about contents; nuking /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433/node_modules/underscore
+133 verbose tar unpack /Users/Christian/.npm/underscore/1.8.3/package.tgz
+134 verbose tar unpacking to /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433/node_modules/underscore
+135 silly gentlyRm /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433/node_modules/underscore is being purged
+136 verbose gentlyRm don't care about contents; nuking /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433/node_modules/underscore
+137 silly gunzTarPerm modes [ '755', '644' ]
+138 silly gunzTarPerm extractEntry package.json
+139 silly gunzTarPerm extractEntry README.md
+140 silly gunzTarPerm extractEntry LICENSE
+141 silly gunzTarPerm extractEntry underscore.js
+142 silly gunzTarPerm extractEntry underscore-min.js
+143 silly gunzTarPerm extractEntry underscore-min.map
+144 verbose write writing to /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433/node_modules/underscore/package.json
+145 info preinstall underscore@1.8.3
+146 verbose readDependencies loading dependencies from /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433/node_modules/underscore/package.json
+147 verbose readDependencies loading dependencies from /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433/node_modules/underscore/package.json
+148 silly install resolved []
+149 verbose about to build /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433/node_modules/underscore
+150 info build /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433/node_modules/underscore
+151 info linkStuff underscore@1.8.3
+152 silly linkStuff underscore@1.8.3 has /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433/node_modules as its parent node_modules
+153 verbose linkBins underscore@1.8.3
+154 verbose linkMans underscore@1.8.3
+155 verbose rebuildBundles underscore@1.8.3
+156 info install underscore@1.8.3
+157 info postinstall underscore@1.8.3
+158 verbose unlock done using /Users/Christian/.npm/_locks/underscore-bad97d57d17637f9.lock for /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433/node_modules/underscore
+159 verbose about to build /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433
+160 info build /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433
+161 info linkStuff rpi-433@1.1.1
+162 silly linkStuff rpi-433@1.1.1 has /Users/Christian/github/robofeeder-rpi/node_modules as its parent node_modules
+163 verbose linkBins rpi-433@1.1.1
+164 verbose linkMans rpi-433@1.1.1
+165 verbose rebuildBundles rpi-433@1.1.1
+166 verbose rebuildBundles [ 'underscore' ]
+167 info install rpi-433@1.1.1
+168 verbose unsafe-perm in lifecycle true
+169 info rpi-433@1.1.1 Failed to exec install script
+170 verbose unlock done using /Users/Christian/.npm/_locks/rpi-433-05344d17d1640876.lock for /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433
+171 verbose stack Error: rpi-433@1.1.1 install: `mkdir ./build && cd ./src && /usr/bin/make`
+171 verbose stack Exit status 2
+171 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:214:16)
+171 verbose stack     at emitTwo (events.js:87:13)
+171 verbose stack     at EventEmitter.emit (events.js:172:7)
+171 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+171 verbose stack     at emitTwo (events.js:87:13)
+171 verbose stack     at ChildProcess.emit (events.js:172:7)
+171 verbose stack     at maybeClose (internal/child_process.js:817:16)
+171 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+172 verbose pkgid rpi-433@1.1.1
+173 verbose cwd /Users/Christian/github/robofeeder-rpi
+174 error Darwin 14.5.0
+175 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "rpi-433" "--save"
+176 error node v4.0.0
+177 error npm  v2.14.2
+178 error code ELIFECYCLE
+179 error rpi-433@1.1.1 install: `mkdir ./build && cd ./src && /usr/bin/make`
+179 error Exit status 2
+180 error Failed at the rpi-433@1.1.1 install script 'mkdir ./build && cd ./src && /usr/bin/make'.
+180 error This is most likely a problem with the rpi-433 package,
+180 error not with npm itself.
+180 error Tell the author that this fails on your system:
+180 error     mkdir ./build && cd ./src && /usr/bin/make
+180 error You can get their info via:
+180 error     npm owner ls rpi-433
+180 error There is likely additional logging output above.
+181 verbose exit [ 1, true ]
+182 verbose unbuild node_modules/rpi-433
+183 info preuninstall rpi-433@1.1.1
+184 info uninstall rpi-433@1.1.1
+185 verbose unbuild rmStuff rpi-433@1.1.1 from /Users/Christian/github/robofeeder-rpi/node_modules
+186 info postuninstall rpi-433@1.1.1
+187 silly gentlyRm /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433 is being purged from base /Users/Christian/github/robofeeder-rpi
+188 verbose gentlyRm don't care about contents; nuking /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433
+189 silly vacuum-fs purging /Users/Christian/github/robofeeder-rpi/node_modules/rpi-433
+190 silly vacuum-fs quitting because other entries in /Users/Christian/github/robofeeder-rpi/node_modules

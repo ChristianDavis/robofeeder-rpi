@@ -27,7 +27,7 @@
 		  
         <button ng-click="app.startServo()" ng-disabled="app.toggle" class="btn btn-success btn-lg">Start</button>
 		<button ng-click="app.stopServo()" ng-disabled="!app.toggle" class="btn btn-danger btn-lg">Stop</button>
-		<button ng-click="app.sendSignal()" ng-disabled="!app.toggle" class="btn btn-primary btn-lg">Signal</button>
+		<button ng-click="app.sendSignal()" class="btn btn-primary btn-lg">Signal</button>
 
           <h2> {{ app.status}} </h2>
       </div>
