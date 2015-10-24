@@ -13,7 +13,7 @@ rfSniffer.on('codes', function (code) {
 //1332995 is working
 var sendSignal = function(){
  // for (var i = 1332900; i < 1333000; i++){
-     rfSend(2995, 22, function(error, stdout) {   //Send 1234 
+     rfSend(1332995, 22, function(error, stdout) {   //Send 1234 
     if(!error) console.log("Sent signal, ", stdout); //Should display 1234 
   })
 //  }

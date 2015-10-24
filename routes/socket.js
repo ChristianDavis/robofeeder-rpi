@@ -41,7 +41,7 @@ module.exports = function (socket) {
  });
   
   socket.on('client_send:signal', function(){
-	 console.log("Signal received.");
+	 //console.log("Signal received.");
 	 rf.sendSignal();
  });
 };
