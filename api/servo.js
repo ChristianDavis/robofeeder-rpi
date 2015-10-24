@@ -1,5 +1,7 @@
 var piblaster = require("pi-blaster.js");  
 
+var pin = 4;
+var pin2 = 18;
 
 var startServo = function(){
     piblaster.setPwm(pin, 0.06);
