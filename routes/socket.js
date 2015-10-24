@@ -2,14 +2,18 @@
  * Serve content over a socket
  */
 
+var api = require("../api/servo");  
+
 var _runningInterval = 3000; // 1000 ms = 1 second
 var _localSocket;
 
 var stopServo = function(){
+    api.stopServo();
 	sendStatus({'status': 'Stopped','isRunning': false});
 };
 
 var startServo = function(){
+    api.startServo();
 	sendStatus({'status': 'Running','isRunning': true});
 };
 
