@@ -11,11 +11,11 @@ rfSniffer.on('codes', function (code) {
  
 // Send 
 var sendSignal = function(){
-  rfSend(1234, 0, function(error, stdout) {   //Send 1234 
+  rfSend(1332995, 22, function(error, stdout) {   //Send 1234 
   if(!error) console.log(stdout); //Should display 1234 
 })
 };
- 
+ //1333004
 /*
 You can also use rfSend like that :
  
