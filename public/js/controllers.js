@@ -29,6 +29,13 @@ angular.module('myApp.controllers', []).
 	  });
     }
  
+    vm.sendSignal = function(){
+      console.log("Signal clicked");
+      socket.emit('client_send:signal', function () {
+		  // not sending any data
+	  });
+    }
+        
     vm.stopServo = function(){
 	  console.log("Stop clicked");
       socket.emit('client_send:stop', function () {

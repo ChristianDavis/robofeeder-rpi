@@ -3,41 +3,45 @@
  */
 
 var api = require("../api/servo");  
+var rf = require("../api/rf");  
+
 
 var _runningInterval = 3000; // 1000 ms = 1 second
-var _localSocket;
 
-var stopServo = function(){
+var stopServo = function(socket){
     api.stopServo();
-	sendStatus({'status': 'Stopped','isRunning': false});
+	sendStatus(socket, {'status': 'Stopped','isRunning': false});
 };
 
-var startServo = function(){
+var startServo = function(socket){
     api.startServo();
-	sendStatus({'status': 'Running','isRunning': true});
+	sendStatus(socket, {'status': 'Running','isRunning': true});
 };
 
-var sendStatus = function(status){
-	  _localSocket.emit('server_status', status); 
+var sendStatus = function(socket, status){
+	  socket.emit('server_status', status); 
 };
 
 module.exports = function (socket) {
   // this scope is opened on connection
   console.log("Socket connected.");
-	
- _localSocket = socket;	
-	
- _localSocket.on('client_send:start', function(){
+		
+  socket.on('client_send:start', function(){
 	console.log("Start received.");
-	startServo();
+	startServo(socket);
 	//Run for a period then stop
 	setTimeout( function() {
-		stopServo();
+		stopServo(socket);
 	}, _runningInterval ); 
  });
 
- _localSocket.on('client_send:stop', function(){
+  socket.on('client_send:stop', function(){
 	 console.log("Stop received.");
 	 stopServo();
+ });
+  
+  socket.on('client_send:signal', function(){
+	 console.log("Signal received.");
+	 rf.sendSignal();
  });
 };
