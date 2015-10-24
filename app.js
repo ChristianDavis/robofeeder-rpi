@@ -9,6 +9,10 @@ var express = require('express'),
   http = require('http'),
   path = require('path');
 
+var rpi433    = require('rpi-433'),
+    rf = require("../api/rf");  
+
+
 var app = module.exports = express();
 var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
